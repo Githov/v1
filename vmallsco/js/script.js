@@ -104,6 +104,7 @@ function General_Save() {
 }
 */
     function send() {
+        alert("hovik");
     var login = $('#login').val();
     var password = $("#password").val();
         $(document).ready(function() {

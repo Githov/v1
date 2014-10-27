@@ -260,13 +260,15 @@
                                     </div>                            
                                     <div class="form-group">
                                         <label>Store Number</label>
-                                        <input class="form-control" placeholder="45" id="storenumber" type="text" maxlength="2">
+                                        <input class="form-control" placeholder="1" maxlength="2" id="storenumber" type="text" onkeyup="this.value=this.value.replace(/[^0-9]+/g,''); isright(this);">
                                         <script type="text/javascript">
-                                            $('#storenumber').bind("change keyup input click", function() {
-                                                if (this.value.match(/[^1-9]/g)) {
-                                                    this.value = this.value.replace(/[^1-9]/g, '');
-                                                }
-                                            });
+                                            function isright(obj)
+                                            {
+                                                if (obj.value > 80)
+                                                    obj.value = "";
+                                                if(obj.value == 0)
+                                                    obj.value ="";
+                                            }
                                         </script>
                                     </div>
                                 </div>
